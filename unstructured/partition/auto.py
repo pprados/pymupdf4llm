@@ -50,6 +50,7 @@ def partition(
     hi_res_model_name: Optional[str] = None,
     model_name: Optional[str] = None,  # to be deprecated
     starting_page_number: int = 1,
+    password: Optional[str] = None,
     **kwargs: Any,
 ):
     """Partitions a document into its constituent elements.
@@ -347,6 +348,7 @@ def partition(
             extract_image_block_output_dir=extract_image_block_output_dir,
             extract_image_block_to_payload=extract_image_block_to_payload,
             starting_page_number=starting_page_number,
+            password=password,
             **kwargs,
         )
     elif file_type == FileType.PPT:
